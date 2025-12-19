@@ -1,5 +1,7 @@
 # Security Policy
 
+<a href="https://github.com/misakiyro/temp3/blob/staging/README.md">README.md</a>
+
 ## Supported Versions
 
 Use this section to tell people about which versions of your project are
