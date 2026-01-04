@@ -25,6 +25,54 @@ cd temp3
          # 运行项目
          npm start
          ```
+     
+         ### 使用示例
+     
+         #### 基本用法
+     
+         ```javascript
+         // 导入模块
+         const temp3 = require('temp3');
+
+         // 初始化
+         const instance = new temp3({
+           option1: 'value1',
+           option2: 'value2'
+         });
+
+         // 执行操作
+         instance.start();
+         ```
+     
+         #### 高级用法
+     
+         ```javascript
+         // 使用配置文件
+         const temp3 = require('temp3');
+         const config = require('./config');
+
+         // 创建实例
+         const app = new temp3(config);
+
+         // 添加事件监听
+         app.on('ready', () => {
+           console.log('应用已启动');
+         });
+
+         // 执行异步操作
+         async function run() {
+           try {
+             await app.initialize();
+             await app.process();
+             console.log('处理完成');
+           } catch (error) {
+             console.error('错误:', error);
+           }
+         }
+
+         run();
+         ```
+         
 
          ### 常见问题
 
